@@ -12,17 +12,17 @@ class PODMR_LNV2(AveragerProgram):
         self.declare_gen(ch = self.cfg["red_ch"])
 
         # prepare lnv_ch
-        freq = self.freq2reg(0, gen_ch = self.cfg["lnv_ch"], ro_ch = self.cfg["ro_memory"][0])
+        freq = self.freq2reg(0, gen_ch = self.cfg["lnv_ch"], ro_ch = self.cfg["CNT1_memory"][0])
         phase = self.deg2reg(0, gen_ch = self.cfg["lnv_ch"])
         self.default_pulse_registers(ch = self.cfg["lnv_ch"], style = "const", mode = "oneshot", freq = freq, phase = phase)
 
         # prepare lnv_ch
-        freq_r = self.freq2reg(0, gen_ch = self.cfg["red_ch"], ro_ch = self.cfg["ro_memory"][0])
+        freq_r = self.freq2reg(0, gen_ch = self.cfg["red_ch"], ro_ch = self.cfg["CNT1_memory"][0])
         phase_r = self.deg2reg(0, gen_ch = self.cfg["red_ch"])
         self.default_pulse_registers(ch = self.cfg["red_ch"], style = "const", mode = "oneshot", freq = freq_r, phase = phase_r)
 
         # prepare mw_ch
-        freq_mw = self.freq2reg(self.cfg['x'], gen_ch = self.cfg["mw_ch"], ro_ch = self.cfg["ro_memory"][0])
+        freq_mw = self.freq2reg(self.cfg['x'], gen_ch = self.cfg["mw_ch"], ro_ch = self.cfg["CNT1_memory"][0])
         phase_mw = self.deg2reg(0, gen_ch = self.cfg["mw_ch"])
         self.default_pulse_registers(ch = self.cfg["mw_ch"], freq = freq_mw, phase = phase_mw, gain = self.cfg["mw_gain"])
         self.set_pulse_registers(ch = self.cfg["mw_ch"], style = "const", mode = "oneshot", length = ns2cycle(self.cfg['mw_len'])) 

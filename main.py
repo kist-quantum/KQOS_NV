@@ -4,6 +4,7 @@ sys.path.append('/home/xilinx/jupyter_notebooks/qick_version_0.2/qick_lib')
 from qick import *
 # Load bitstream file, hwh file also needed#
 soc = QickSoc(bitfile="./qick_111_241112_v6.bit")
+# soc = QickSoc(bitfile="./top_kist_zcu111.bit")
 
 from socket import *
 import threading
@@ -27,6 +28,7 @@ while True:
         pprint(f'Client {ip} is connected')
         while True:
             recv_data = client_sock.recv(1024)
+            print(recv_data)
             if not recv_data:
                 client_sock.close()
             else:

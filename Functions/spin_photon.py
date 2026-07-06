@@ -10,19 +10,19 @@ class spin_photon(AveragerProgram):
         self.declare_gen(ch=self.cfg["mw_ch"])
         
         # prepare mw_ch
-        freq_mw = self.freq2reg(self.cfg['mw_freq'], gen_ch=self.cfg["mw_ch"], ro_ch=self.cfg["ro_memory"][0])
+        freq_mw = self.freq2reg(self.cfg['mw_freq'], gen_ch=self.cfg["mw_ch"], ro_ch=self.cfg["CNT1_memory"][0])
         phase_mw = self.deg2reg(0, gen_ch=self.cfg["mw_ch"])
         self.default_pulse_registers(ch=self.cfg["mw_ch"], freq=freq_mw, phase=phase_mw, gain=self.cfg["mw_gain"])
         self.set_pulse_registers(ch=self.cfg["mw_ch"], style="const", mode="oneshot", length=ns2cycle(self.cfg["mw_pi_pulse"])) #원본
 
         # prepare green channel 
-        freq = self.freq2reg(200, gen_ch=self.cfg["green_ch"], ro_ch=self.cfg["ro_memory"][0])
+        freq = self.freq2reg(200, gen_ch=self.cfg["green_ch"], ro_ch=self.cfg["CNT1_memory"][0])
         phase = self.deg2reg(0, gen_ch=self.cfg["green_ch"])
         self.default_pulse_registers(ch=self.cfg["green_ch"], freq=freq, phase=phase, gain=self.cfg["green_gain"])
         self.set_pulse_registers(ch=self.cfg["green_ch"], style="const", mode="oneshot", length=ns2cycle(self.cfg["spin_init_time"]) ) # 원본
 
         # prepare red channel 
-        freq = self.freq2reg(200, gen_ch=self.cfg["red_ch"], ro_ch=self.cfg["ro_memory"][0])
+        freq = self.freq2reg(200, gen_ch=self.cfg["red_ch"], ro_ch=self.cfg["CNT1_memory"][0])
         phase = self.deg2reg(0, gen_ch=self.cfg["red_ch"])
         self.default_pulse_registers(ch=self.cfg["red_ch"], freq=freq, phase=phase, gain=self.cfg["red_gain"])
         self.set_pulse_registers(ch=self.cfg["red_ch"], style="const", mode="oneshot", length=ns2cycle(self.cfg["ro_len"]) ) # 원본

@@ -23,6 +23,11 @@ from Functions.init_pulse_LNV import init_pulse_LNV
 from Functions.Echo_LNV import Echo_LNV
 from Functions.green_AOM_timing import green_AOM_timing
 from Functions.init_pulse_LNV_temp import init_pulse_LNV_temp
+from Functions.Lifetime import Lifetime
+from Functions.pulse_PSB_GR import pulse_PSB_GR
+from Functions.pulse_ZPL_GR import pulse_ZPL_GR
+from Functions.Nuclear_ODMR import Nuclear_ODMR
+from Functions.pulse_gen import pulse_gen
 from run_averager import run_and_count
 
 # response data is dict that must have keys 'command' and 'results'.
@@ -101,5 +106,21 @@ def process(recv_data: dict, soc: QickSoc):
         response['results'] = run_and_count(soc, prog, recv_data)    
     elif recv_data['command'] == 'init_pulse_LNV_temp':
         prog = init_pulse_LNV_temp(soc, recv_data)
-        response['results'] = run_and_count(soc, prog, recv_data)    
+        response['results'] = run_and_count(soc, prog, recv_data)
+    elif recv_data['command'] == 'Lifetime':
+        prog = Lifetime(soc, recv_data)
+        response['results'] = run_and_count(soc, prog, recv_data)
+    elif recv_data['command'] == "pulse_PSB_GR":
+        prog = pulse_PSB_GR(soc, recv_data)
+        response['results'] = run_and_count(soc, prog, recv_data)
+    elif recv_data['command'] == "pulse_ZPL_GR":
+        prog = pulse_ZPL_GR(soc, recv_data)
+        response['results'] = run_and_count(soc, prog, recv_data)
+    elif recv_data['command'] == "Nuclear_ODMR":
+        prog = Nuclear_ODMR(soc, recv_data)
+        response['results'] = run_and_count(soc, prog, recv_data)
+    elif recv_data['command'] == "pulse_gen":
+        prog = pulse_gen(soc, recv_data)
+        prog.acquire_decimated(soc, load_pulses=True, progress=True)
+    
     return response

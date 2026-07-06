@@ -17,12 +17,12 @@ def run_and_count(soc: QickSoc, prog: AveragerProgram, cfg: dict) -> list:
     while True:
         complete_flag = True
         # 모든 카운터의 comp 신호가 '1'로 감지될 경우 카운트 읽음
-        if 'ro_memory' in cfg.keys():
-            for memory_num in cfg['ro_memory']:
+        if 'CNT1_memory' in cfg.keys():
+            for memory_num in cfg['CNT1_memory']:
                 if not mmio_timed_pwms[memory_num].read(ADD_COMP):
                     complete_flag = False
-        if '_ro_memory' in cfg.keys():
-            for memory_num in cfg['_ro_memory']:
+        if 'CNT2_memory' in cfg.keys():
+            for memory_num in cfg['CNT2_memory']:
                 if not mmio_timed_pwms[memory_num].read(ADD_COMP):
                     complete_flag = False
         if complete_flag:
@@ -30,10 +30,10 @@ def run_and_count(soc: QickSoc, prog: AveragerProgram, cfg: dict) -> list:
 
     counts = {}
 
-    if 'ro_memory' in cfg.keys():
-        for memory_num in cfg['ro_memory']:
+    if 'CNT1_memory' in cfg.keys():
+        for memory_num in cfg['CNT1_memory']:
             counts[memory_num] = mmio_async_cnts[memory_num].read(ADD_CNT)
-    if '_ro_memory' in cfg.keys():
-        for memory_num in cfg['_ro_memory']:
+    if 'CNT2_memory' in cfg.keys():
+        for memory_num in cfg['CNT2_memory']:
             counts[memory_num] = mmio_async_cnts[memory_num].read(ADD_CNT2)
     return counts

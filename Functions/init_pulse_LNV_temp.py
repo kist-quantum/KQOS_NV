@@ -24,13 +24,13 @@ class init_pulse_LNV_temp(AveragerProgram):
         self.set_pulse_registers(ch=self.cfg["green_ch"], style="const", mode="oneshot", length=ns2cycle(self.cfg['init_len']))
 
         # prepare red channel 
-        freq = self.freq2reg(200, gen_ch = self.cfg["red_ch"], ro_ch = self.cfg["ro_memory"][0])
+        freq = self.freq2reg(200, gen_ch = self.cfg["red_ch"], ro_ch = self.cfg["CNT1_memory"][0])
         phase = self.deg2reg(0, gen_ch = self.cfg["red_ch"])
         self.default_pulse_registers(ch = self.cfg["red_ch"], freq = freq, phase = phase, gain = self.cfg["red_gain"])
         self.set_pulse_registers(ch = self.cfg["red_ch"], style = "const", mode = "oneshot", length = ns2cycle(self.cfg["red_len"])) # 원본
 
         # Conver freq to DAC freq(ensuring it is an availabble ADC freq)
-        freq = self.freq2reg(0, gen_ch = self.cfg["pulse_ch"], ro_ch = self.cfg["ro_memory"][0])
+        freq = self.freq2reg(0, gen_ch = self.cfg["pulse_ch"], ro_ch = self.cfg["CNT1_memory"][0])
         phase = self.deg2reg(0, gen_ch = self.cfg["pulse_ch"])
         self.default_pulse_registers(ch = self.cfg["pulse_ch"], freq = freq, phase = phase, gain = self.cfg["pulse_gain"])
         self.set_pulse_registers(ch = self.cfg["pulse_ch"], style = "arb", mode = self.cfg["idata_mode"], waveform = "square_wave0")
