@@ -10,21 +10,21 @@ Implementing a robust spin-photon interface demands nanosecond-scale precision a
 
 ---
 
-## 🛠️ Included Experimental Sequences
+## Included Experimental Sequences
 
 The repository contains automated execution scripts and configuration files for standard NV⁻ characterization protocols:
 
 ### 1. Spin Coherence & Relaxation Measurements
 * **$T_1$ (Spin Relaxation Time):** Measures the longitudinal relaxation time of the electron spin to evaluate ambient thermal/magnetic environment coupling.
-* **$T_2$ (Hahn Echo / Spin Echo):** Cancels static inhomogeneous broadening using a refocusing pulse to determine the true spin coherence time.
-* **$T_2^*$ (Ramsey Interferometry):** Evaluates the dephasing time and characterises the local magnetic field environment/detuning.
+* **$T_2$ (Spin Echo):** Cancels static inhomogeneous broadening using a refocusing pulse to determine the true spin coherence time.
+* **$T_2^*$ (Ramsey):** Evaluates the dephasing time and characterises the local magnetic field environment/detuning.
 
 ### 2. Optical & Resonant Control
 * **Resonant Optical Excitation Sequence:** Implements state-selective optical readout and spin-photon entanglement protocols via precise laser pulse routing and photon-counting synchronization.
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 KQOS is built on top of the QICK (https://github.com/openquantumhardware/qick.git) framework to enable seamless, low-latency control over the RF/digital channels of the hardware.
 
