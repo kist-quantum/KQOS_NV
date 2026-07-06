@@ -31,7 +31,7 @@ KQOS is built on top of the QICK (https://github.com/openquantumhardware/qick.gi
 Ensure your FPGA environment meets the following specific dependency versions:
 
 * **Python** == 3.8.2
-* **QICK** == 0.2.nn
+* **QICK** == 0.2
 * **PYNQ** == 3.0.1
 
 ---
