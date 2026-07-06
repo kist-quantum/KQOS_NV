@@ -8,8 +8,6 @@
 
 Implementing a robust spin-photon interface demands nanosecond-scale precision and reliable hardware-software synchronization. KQOS bridges the gap between high-level experimental logic and low-level FPGA execution, housing the essential sequences needed to establish and evaluate quantum node performance.
 
-> 💡 **Scope Note:** This repository focuses **strictly** on the pulse sequencing and timing control for the FPGA. Peripheral optical instrument control (e.g., stages, power meters) is handled separately within the high-level GUI application layer.
-
 ---
 
 ## 🛠️ Included Experimental Sequences
