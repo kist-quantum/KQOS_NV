@@ -1,0 +1,27 @@
+# Green init Red readout Rabi configuration file
+
+[soc]
+mw_ch = 4
+green_ch = 5
+red_ch = 1
+
+mw_gain = 2000
+mw_freq = 2764   # in MHz
+green_gain = 30000
+red_gain = 4000
+
+CNT1_memory = [0, 1, 2, 3, 4, 5, 6, 7]
+reps = 1
+
+spin_init_time = 4000
+mw_pi_pulse = 129
+
+mw_delay = 243
+apd_delay = 365
+red_delay = 56
+
+dwell_left = 10
+dwell_right = 10
+ro_len = 300
+
+[pc]

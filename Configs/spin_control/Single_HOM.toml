@@ -1,0 +1,19 @@
+# Single_HOM configuration
+
+[soc]
+green_ch = 5
+green_gain = 30000
+
+green_pulse_len = 5      # ns, ON time
+green_period = 40        # ns, pulse repetition period
+reps = 10000
+
+[pc]
+start = 10
+end = 1000
+step = 10
+
+iteration = 100
+autofocus = false
+autofocus_period = 9999
+shuffle = false

@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>images/icons/cil-frown.png</file>
+    <file>images/icons/cil-chevron-left.png</file>
+    <file>images/icons/cil-smile.png</file>
+  </qresource>
+</RCC>

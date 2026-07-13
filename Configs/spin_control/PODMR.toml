@@ -1,0 +1,30 @@
+# PODMR configuration file
+
+[soc]
+mw_ch = 4
+green_ch = 5
+laser_power = 30000
+mw_power = 10000
+
+reps = 10000
+ro_len = 5000
+spin_init_time = 3000
+CNT1_memory = [0, 1]
+mw_offset = 0
+dwell_left = 100
+dwell_right = 100
+mw_len = 144
+mw_delay = 243
+apd_delay = 365
+green_delay = 0
+
+[pc]
+# frequency sweep range in MHz
+start = 2600
+end = 3100
+step = 4
+iteration = 25000
+
+autofocus = false
+autofocus_period = 20000
+shuffle = false

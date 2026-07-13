@@ -1,0 +1,31 @@
+# pulse_ZPL_GR configuration file
+
+[soc]
+pulse_ch = 0
+green_ch = 5
+red_ch = 1
+
+pulse_gain = 32000
+green_gain = 30000
+red_gain = 30000
+CNT2_memory = [0, 1]
+reps = 100
+
+green_delay = 0 
+init_len = 2000
+ro_len = 1000
+pulse_delay = 200
+red_len = 40
+red_delay = 255
+apd_delay = 294
+idata_mode = "oneshot"
+
+# length 8
+idata_gain1 = 0
+idata_gain2 = 9000
+
+idata_width1 = 632
+idata_width2 = 24
+
+
+[pc]

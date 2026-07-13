@@ -1,0 +1,41 @@
+# Green init Red readout Rabi configuration file
+[soc]
+mw_ch = 4
+green_ch = 5
+red_ch = 2
+
+# mw
+mw_power = 5000
+mw_freq = 2628.7   # in MHz
+
+# laser
+green_laser_gain = 30000
+red_laser_gain = 30000
+
+
+# sequence
+green_freq = 1000
+spin_init_time = 100
+red_ro_time = 100
+ro_len = 1000
+dwell_left = 100
+dwell_right = 100
+mw_offset = 0
+red_delay = 56
+mw_delay = 243
+apd_delay = 365
+
+# etc
+CNT1_memory = [0, 1]
+reps = 100000
+
+[pc]
+# tau sweep range in ns (tau should be larger than ~10)
+start = 10
+end = 12
+step = 10
+
+iteration = 50
+autofocus = false
+autofocus_period = 9999
+shuffle = false

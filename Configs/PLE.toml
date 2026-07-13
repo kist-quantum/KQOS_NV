@@ -1,0 +1,22 @@
+# PLE configuration file
+
+[soc]
+mw_ch = 4
+green_ch = 5
+red_ch = 1
+
+green_laser_gain     = 30000
+red_laser_gain       = 30000
+
+green_laser_time     = 3000
+margin_between_laser = 5000
+red_laser_time       = 10000
+apd_time_delay       = 100
+mw_pulse_gain        = 3000
+mw_freq1             = 2857
+mw_freq2             = 2902
+res_phase            = 0
+
+reps   = 10000
+ro_len = 10000
+CNT1_memory = [0, 1]

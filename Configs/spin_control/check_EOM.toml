@@ -1,0 +1,107 @@
+# check_EOM configuration file
+
+[soc]
+pulse_ch = 0
+green_ch = 5
+red_ch = 1
+
+pulse_gain = 32000
+green_gain = 30000
+red_gain = 0
+CNT1_memory = [0, 1]
+reps = 10000
+
+green_delay = 0 
+init_len = 2000
+ro_len = 1000
+pulse_delay = 200
+red_len = 40
+red_delay = 255
+apd_delay = 250 # +44.2
+idata_mode = "oneshot"
+
+# length 8
+idata_gain1 = 0
+idata_gain2 = 20000
+idata_gain3 = 0
+idata_gain4 = 0
+idata_gain5 = 0
+
+idata_width1 = 640
+idata_width2 = 24
+idata_width3 = 16 
+idata_width4 = 376
+idata_width5 = 0
+
+# length 24
+# idata_gain1 = 0
+# idata_gain2 = 21000
+# idata_gain3 = 680
+# idata_gain4 = 1220
+# idata_gain5 = 1350
+# idata_width1 = 400
+# idata_width2 = 24
+# idata_width3 = 16 
+# idata_width4 = 160
+# idata_width5 = 200
+
+# length 48
+# idata_gain1 = 0
+# idata_gain2 = 30000
+# idata_gain3 = 2750
+# idata_gain4 = 3400
+# idata_gain5 = 3700
+# idata_width1 = 400
+# idata_width2 = 48
+# idata_width3 = 16 
+# idata_width4 = 122
+# idata_width5 = 214
+
+# mode none
+# idata_gain1 = 0
+# idata_gain2 = 20000
+# idata_gain3 = 500
+# idata_gain4 = 100
+# idata_gain5 = 0
+# idata_width1 = 360
+# idata_width2 = 20
+# idata_width3 = 44
+# idata_width4 = 160
+# idata_width5 = 200
+
+# mode tail suppress
+# idata_gain1 = 0
+# idata_gain2 = 10000
+# idata_gain3 = -100
+# idata_gain4 = 100
+# idata_gain5 = 100
+
+# idata_width1 = 640
+# idata_width2 = 24
+# idata_width3 = 24
+# idata_width4 = 8
+# idata_width5 = 344
+
+## mode tail suppress 2
+# idata_gain1 = 0
+# idata_gain2 = 10000
+# idata_gain3 = -150
+# idata_gain4 = 120
+# idata_gain5 = 180
+
+# idata_width1 = 640
+# idata_width2 = 24
+# idata_width3 = 12
+# idata_width4 = 28
+# idata_width5 = 96
+
+[pc]
+# tau sweep range in ns (tau should be larger than ~10)
+start = 10
+end = 1000
+step = 20
+
+iteration = 200
+autofocus = false
+autofocus_period = 9999
+shuffle = false

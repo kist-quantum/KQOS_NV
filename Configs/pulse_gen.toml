@@ -1,0 +1,20 @@
+# check_EOM configuration file
+
+pulse_ch = 0
+reps = 10000
+
+pulse_gain = 30000
+idata_mode = "periodic"
+
+# length 8
+idata_gain1 = 30000
+idata_gain2 = 0
+idata_gain3 = 0
+idata_gain4 = 0
+idata_gain5 = 0
+
+idata_width1 = 15
+idata_width2 = 433
+idata_width3 = 0
+idata_width4 = 0
+idata_width5 = 0

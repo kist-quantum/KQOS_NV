@@ -1,0 +1,30 @@
+# Rabi configuration file
+
+[soc]
+mw_ch = 4
+green_ch = 5
+
+green_gain = 35000
+mw_gain = 30000
+mw_freq = 2870   # in MHz
+CNT2_memory = [0, 1]
+reps = 10000
+
+spin_init_time = 3000
+ro_len = 1000
+dwell_left = 100
+dwell_right = 100
+green_delay = 0
+mw_delay = 243
+apd_delay = 387 # 365
+
+[pc]
+# tau sweep range in ns (tau should be larger than ~10)
+start = 10
+end = 2000
+step = 20
+
+iteration = 10000
+autofocus = false
+autofocus_period = 9999
+shuffle = false

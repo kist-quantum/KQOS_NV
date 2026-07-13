@@ -1,0 +1,34 @@
+# check_EOM configuration file
+
+[soc]
+pulse_ch = 0
+green_ch = 5
+
+green_gain = 15000
+CNT1_memory = [0, 1]
+reps = 1000
+
+apd_delay = 250
+pulse_delay = 0
+idata_mode = "oneshot"
+
+init_gain = 0
+pre_pulse_gain = 21000
+pulse_gain = 680
+after_pulse_gain = 1220
+init_len = 2400
+pre_pulse_len = 240
+pulse_len = 3
+after_pulse_len = 237
+
+
+[pc]
+# tau sweep range in ns (tau should be larger than ~10)
+start = 10
+end = 1000
+step = 20
+
+iteration = 45
+autofocus = false
+autofocus_period = 9999
+shuffle = false

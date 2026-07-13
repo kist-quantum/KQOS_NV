@@ -1,0 +1,27 @@
+[soc]
+green_ch = 5
+
+green_gain = 30000
+
+CNT1_memory = [0, 1]
+reps = 30000
+
+excite_len = 8
+ro_len = 300
+dwell_left = 0
+dwell_right = 0
+
+green_delay = 0
+apd_delay = 300
+
+relax_delay = 2000
+
+[pc]
+start = 10
+end = 500
+step = 10
+
+iteration = 100
+autofocus = false
+autofocus_period = 9999
+shuffle = false

@@ -1,0 +1,19 @@
+# Confocal Red
+
+[green_laser]
+laser_ch = 5
+laser_freq = 200
+laser_gain = 30000
+reps = 1
+
+[red1_laser]
+laser_ch = 1
+laser_gain = 30000
+laser_freq = 200
+reps = 1
+
+[red2_laser]
+laser_ch = 2
+laser_gain = 30000
+laser_freq = 200
+reps = 1

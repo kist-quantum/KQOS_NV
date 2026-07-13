@@ -1,0 +1,31 @@
+title = "red Rabi Experiment Configuration"
+
+[soc] # defines delay, marign, etc within each single pulse shot
+spin_init_time = 2000
+readout_laser_time = 300
+apd_readout_time = 300
+
+dwell_left_delay = 1000
+dwell_right_delay = 1000
+margin_betweeen_ref_laser = 500
+
+mw_delay = 0
+apd_delay = 500
+right = 0
+ref_apd_delay = 280
+signal_apd_delay = 280
+
+mw_freq = 2771        # in MHz
+mw_pulse_gain = 32000
+
+
+[pc]
+# frequency sweep range in MHz
+start = 0
+end = 5000
+step = 50
+iteration = 25000
+
+autofocus = false
+autofocus_period = 20000
+shuffle = false

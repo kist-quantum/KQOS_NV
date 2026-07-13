@@ -1,0 +1,24 @@
+# ODMR configuration file
+
+[soc]
+mw_ch = 4
+green_ch = 5
+laser_power = 20000
+mw_power = 10000
+reps = 10000
+ro_len = 5000
+CNT2_memory = [0, 1]
+mw_delay = 0
+apd_delay = 500
+# mw_freq = 2870
+
+[pc]
+# frequency sweep range in MHz
+start = 2600
+end = 3100
+step = 4
+iteration = 100
+
+autofocus = false
+autofocus_period = 20000
+shuffle = false

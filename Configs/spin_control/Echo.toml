@@ -1,0 +1,42 @@
+# Echo configuration file
+
+[soc]
+mw_ch = 4
+green_ch = 5
+
+green_gain = 30000
+mw_gain = 3000
+
+mw_freq = 2865.51
+CNT1_memory = [0, 1]
+reps = 30000
+
+spin_init_time = 2000
+
+# readout
+ro_len = 300
+readout_length = 300
+readout_delay = 100
+
+dwell_left = 100
+dwell_right = 100
+
+mw_offset = 0
+green_delay = 0
+mw_delay = 150
+apd_delay = 300
+
+pi_pulse = 200
+
+# shot-to-shot delay
+relax_delay = 5000
+
+[pc]
+start = 50
+end = 2000
+step = 10
+
+iteration = 100
+autofocus = false
+autofocus_period = 9999
+shuffle = false

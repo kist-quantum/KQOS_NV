@@ -1,0 +1,43 @@
+# Rabi_GG_LNV configuration file
+
+[soc]
+lnv_ch = 0
+ref_ch = 2
+mw_ch = 4
+
+CNT1_memory = [0, 1]
+mw_gain = 5000
+reps = 10000
+mw_freq = 2629.42
+
+# not used, but nesessary 
+init_len = 3000
+ro_len = 3000
+dwell_left = 100
+dwell_right = 200
+
+mw_offset = 0
+mw_delay = 9900
+apd_delay = 200
+
+#Rabi
+#Sequence (width = ns)
+init_gain = -23000
+init_width = 4000
+free_gain = 26500
+free_width = 400
+readout_gain = -23000
+readout_width = 1000
+after_gain = 26500
+after_width = 2000
+
+[pc]
+# tau sweep range in ns (tau should be larger than ~10)
+start = 10000
+end = 10001
+step = 1
+
+iteration = 1000
+autofocus = false
+autofocus_period = 9999
+shuffle = false

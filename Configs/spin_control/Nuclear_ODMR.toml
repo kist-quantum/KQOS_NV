@@ -1,0 +1,50 @@
+# Nuclear_ODMR configuration file
+
+[soc]
+
+# green laser
+green_ch = 5
+green_gain = 25000
+laser_freq = 210
+
+# MW
+mw_ch = 4
+mw_gain = 4000
+
+mw_freq1 = 2870 #in MHZ
+mw_freq2 = 2870 #in MHZ
+
+mw_pi_len1 = 100
+mw_pi_len2 = 100
+
+# RF
+RF_ch = 2
+RF_gain = 4000
+
+# timing
+spin_init_time = 5000
+green_delay = 0
+mw_delay = 0
+mw_gap = 100
+mw_RF_gap = 100
+RF_delay = 0
+dwell_left = 5000
+dwell_right = 500
+apd_delay = 0
+
+
+reps = 5000
+ro_len = 5000
+ro_memory = [0, 1]
+
+
+[pc]
+
+start = 10
+end = 1000
+step = 10
+
+iteration = 100
+autofocus = false
+autofocus_period = 5
+shuffle = false

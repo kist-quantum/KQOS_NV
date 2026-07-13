@@ -1,0 +1,33 @@
+# Rabi configuration file
+
+[soc]
+mw_ch = 4
+green_ch = 5
+laser_power = 35000
+mw_power = 35000
+resonance_freq = 2864.2   # in MHz
+pi_pulse = 38.9
+CNT1_memory = [0, 1]
+reps = 2500
+
+spin_init_time = 2000
+ro_len = 500
+dwell_left = 300
+dwell_right = 300
+mw_offset = 0
+laser_delay = 0
+mw_delay = 0
+apd_delay = 360
+
+without_pi = true
+
+[pc]
+# tau sweep range in ns (tau should be larger than ~10)
+start = 10
+end = 20000000
+step = 1300000
+
+iteration = 6
+autofocus = true
+autofocus_period = 240    # in sec
+shuffle = false

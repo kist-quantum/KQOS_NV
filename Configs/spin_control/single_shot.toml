@@ -1,0 +1,58 @@
+# check_EOM configuration file
+
+[soc]
+pulse_ch = 0
+red_ch = 1
+green_ch = 5
+
+red_gain = 30000
+CNT1_memory = [0, 1]
+reps = 10000
+
+green_gain = 30000
+green_delay = 0
+
+term = 10
+
+ro_len = 20
+
+pulse_delay = 8
+
+red_len = 3 # clk
+red_delay = 0
+
+pulse_freq = 0
+pulse_gain = 32000
+res_phase = 0
+
+idata_gain1 = 16000
+idata_gain2 = -8500
+idata_gain3 = -8400
+idata_mode = "oneshot"
+idata_width1 = 400
+idata_width2 = 16
+idata_width3 = 384
+
+pulse_gain0= 32000
+pulse_gain1= 32000
+
+spin_init_time = 2000
+pulse_len1= 160
+pulse_len2= 160
+readout_len= 10
+adc_trig_offset= 150
+soft_avgs= 1
+dc_qick_offset= 0
+mixer_freq = 1000
+sigma = 0.025
+
+[pc]
+# tau sweep range in ns (tau should be larger than ~10)
+start = 10
+end = 1000
+step = 20
+
+iteration = 10
+autofocus = false
+autofocus_period = 9999
+shuffle = false

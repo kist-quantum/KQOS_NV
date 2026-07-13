@@ -1,0 +1,21 @@
+# PODMR configuration file
+
+[soc]
+green_ch = 5
+green_gain = 30000
+
+reps = 10000
+ro_len = 200
+CNT1_memory = [0, 1]
+green_delay = 500 # green_delay = apd_delay + 300
+
+[pc]
+# frequency sweep range in MHz
+start = 160
+end = 240
+step = 2
+iteration = 25000
+
+autofocus = false
+autofocus_period = 20000
+shuffle = false
