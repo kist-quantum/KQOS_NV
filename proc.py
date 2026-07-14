@@ -28,6 +28,7 @@ from Functions.pulse_PSB_GR import pulse_PSB_GR
 from Functions.pulse_ZPL_GR import pulse_ZPL_GR
 from Functions.Nuclear_ODMR import Nuclear_ODMR
 from Functions.pulse_gen import pulse_gen
+from Functions.g2 import g2
 from run_averager import run_and_count
 
 # response data is dict that must have keys 'command' and 'results'.
@@ -38,9 +39,12 @@ def process(recv_data: dict, soc: QickSoc):
 
     if recv_data['command'] == 'laser_on':
         prog = laser(soc, recv_data)
-        prog.acquire_decimated(soc, load_pulses=True, progress=True)
+        # prog.acquire_decimated(soc, load_pulses=True, progress=True)
+        prog.run(soc, load_pulses=True)
     elif recv_data['command'] == 'laser_off':
         soc.reset_gens()
+    elif recv_data['command'] == 'g2':
+        response['results'] = g2(soc, recv_data)
     elif recv_data['command'] == 'confocal':
         prog = confocal(soc, recv_data)
         response['results'] = run_and_count(soc, prog, recv_data)

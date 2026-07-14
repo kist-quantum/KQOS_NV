@@ -1,0 +1,4 @@
+__pycache__/
+*.bak
+g2_chunks/
+g2_*.json
