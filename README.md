@@ -12,8 +12,8 @@ Implementing a robust spin-photon interface demands nanosecond-scale precision a
 
 ## Features
 
-This branch contains the sequence of the experiments and communication protocols.
-if you want to seek other situations(like auto-align, laser tuning and etc), you may move to **nv-client** branch
+This branch contains the experimental sequences and communication protocols.
+for other functionalities (e.g., GUI service, Auto-align and etc.), please switch to the **nv-client** branch
 
 <img width="1280" height="720" alt="논문_figure_JP_260310" src="https://github.com/user-attachments/assets/2c1cc96e-ab7c-4305-b1a0-03e94cf20846" />
 
