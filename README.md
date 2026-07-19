@@ -10,12 +10,12 @@ This repository will introuce you about the **KQOS**  that is a specialized hard
 
 Implementing a robust spin-photon interface demands nanosecond-scale precision and reliable hardware-software synchronization. KQOS bridges the gap between high-level experimental logic and low-level FPGA execution, housing the essential sequences needed to establish and evaluate quantum node performance.
 
----
-
 ## Features
 
 This branch contains the sequence of the experiments and communication protocols.
 if you want to seek other situations(like auto-align, laser tuning and etc), you may move to **nv-client** branch
+
+<img width="1280" height="720" alt="논문_figure_JP_260310" src="https://github.com/user-attachments/assets/2c1cc96e-ab7c-4305-b1a0-03e94cf20846" />
 
 ---
 
