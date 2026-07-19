@@ -1,4 +1,37 @@
-Origin에 푸쉬하시면 극대노할겁니다.
+# Project Name
 
-따로 환경을 구축해서 개발하지 않았기 때문에 module dependency에 있는 모든 라이브러리가 필요하지 않습니다. 필요한 모듈 찾아서 설치하세요.
-귀찮으면 pip install -r requirements.txt로 전부 설치 하셔도 됩니다.
+This repository provides a GUI and instrument control software to simplify NV center searching and tunable-parameter experiments.
+
+---
+
+## Overview
+
+This repository contains
+
+- GUI application
+- Instrument controllers
+- Experimental parameters
+- Communication protocols
+
+---
+
+## Quick Start
+
+This branch must be used after starting the server located in the **main** branch.
+
+---
+
+## Experimental Sequences
+
+Experimental procedures are organized as modular sequences.
+
+Examples
+
+- Auto Alignment
+- Laser Tuning
+- ODMR
+- Rabi
+- Ramsey
+- Spin Echo
+
+---
