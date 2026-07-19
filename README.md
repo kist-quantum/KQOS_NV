@@ -1,12 +1,21 @@
 # KQOS: Middleware for NV⁻ Spin-Photon Interface Control
 
-**KQOS** is a specialized hardware control middleware designed to interface, orchestrate, and automate experiments on Nitrogen-Vacancy (NV⁻) center spin-photon interfaces. This repository provides the core pulse sequencing routines required to initialize, manipulate, and characterize NV⁻ electron spins for quantum networking and quantum engineering applications.
+Glad to see you there.
+
+This repository will introuce you about the **KQOS**  that is a specialized hardware control middleware designed to interface, orchestrate, and experiments on Nitrogen-Vacancy (NV⁻) center spin-photon interfaces.
 
 ---
 
 ##  Overview
 
 Implementing a robust spin-photon interface demands nanosecond-scale precision and reliable hardware-software synchronization. KQOS bridges the gap between high-level experimental logic and low-level FPGA execution, housing the essential sequences needed to establish and evaluate quantum node performance.
+
+---
+
+## Features
+
+This branch contains the sequence of the experiments and communication protocols.
+if you want to seek other situations(like auto-align, laser tuning and etc), you may move to **nv-client** branch
 
 ---
 
