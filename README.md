@@ -1,4 +1,4 @@
-# Project Name
+# KQOS client
 
 This repository provides a GUI and instrument control software to simplify NV center searching and tunable-parameter experiments.
 
